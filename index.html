@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>The CARROT Protocol | The Decentralized Reserve Currency</title>
+    <meta
+        content="CARROT is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world."
+        name="description">
+    <meta content="The CARROT Protocol | The Decentralized Reserve Currency" property="og:title">
+    <meta
+        content="CARROT is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world."
+        property="og:description">
+    <meta content="./assets/CARROT.png" property="og:image">
+    <meta content="The CARROT Protocol | The Decentralized Reserve Currency" property="twitter:title">
+    <meta
+        content="CARROT is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world."
+        property="twitter:description">
+    <meta content="./assets/CARROT.png" property="twitter:image">
+    <meta property="og:type" content="website">
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link href="./assets/CARROT.png" rel="shortcut icon" type="image/x-icon">
+    <link href="./assets/CARROT.png" rel="apple-touch-icon">
+
+    <meta name="twitter:image" content="./assets/CARROT.png">
+    <meta name="twitter:description"
+        content="CARROT is building a community-owned decentralized financial infrastructure to bring more stability and transparency for the world.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The CARROT Protocol | The Decentralized Reserve Currency">
+
+    <meta property="og:image" content="./assets/CARROT.png">
+</head>
+
+<body id="carrto-finance">
+    <div class="container-fluid">
+        <div class="row">
+            <div id="sidebarContainer" class="col-auto" style="z-index: 1000002;">
+                <div id="sidebar" class="d-flex flex-column align-items-center pe-2 py-4">
+                    <a id="logo" href="" class="text-decoration-none mb-5 w-100 d-flex align-items-center ps-3 pe-2">
+                        <img src="./assets/CARROT.png" alt="logo-icon" class="col-2">
+                    </a>
+
+                    <ul id="sidebar-nav" class="list-unstyled p-0 py-5">
+                        <li class="mb-4 py-2 px-5 rounded-pill active">
+                            <a href="index.html" class="text-decoration-none text-reset d-flex align-items-center">
+                                <span class="ms-3">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="mb-4 py-2 px-5 rounded-pill">
+                            <a href="stake.html" class="text-decoration-none text-reset d-flex align-items-center">
+                                <span class="ms-3">Stake CARROT</span>
+                            </a>
+                        </li>
+                        <li class="mb-4 py-2 px-5 rounded-pill">
+                            <a href="stakelp.html" class="text-decoration-none text-reset d-flex align-items-center">
+                                <span class="ms-3">Stake LP</span>
+                            </a>
+                        </li>
+                        <li class="mb-4 py-2 px-5 rounded-pill">
+                            <a href="https://app.zyberswap.io/exchange/swap?outputCurrency=0x8418B8BFF5a9979e26091922bF8614b78e93c44B"
+                                class="text-decoration-none text-reset d-flex align-items-center">
+                                <span class="ms-3">Swap</span>
+                            </a>
+                        </li>
+                        <li class="mb-4 py-2 px-5 rounded-pill">
+                            <a href="https://www.defined.fi/arb/0x5bcb14eeb3739a2140ea23535c96394597c85e82"
+                                class="text-decoration-none text-reset d-flex align-items-center">
+                                <span class="ms-3">Chart</span>
+                            </a>
+                        </li>
+                        <li class="mb-4 py-2 px-5 rounded-pill">
+                            <a href="" class="text-decoration-none text-reset d-flex align-items-center">
+                                <span class="ms-3">Docs</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex justify-content-around w-100 px-4">
+                        <a href="" class="text-decoration-none text-reset fs-5 social-icon-hover">
+                            <i class="bi bi-send-fill"></i>
+                        </a>
+                        <a href="https://twitter.com/RabbitHoleARB"
+                            class="text-decoration-none text-reset fs-5 social-icon-hover">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="" class="text-decoration-none text-reset fs-5 social-icon-hover">
+                            <i class="bi bi-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="overlay" style="z-index: 1000001;"></div>
+
+            <main class="col pt-4">
+                <div class="w-100 position-fixed end-0 top-0" style="height: 68px; z-index: 100001;">
+                    <div class="d-flex pt-3 px-sm-3">
+                        <button type="button" id="showSidebar" class="d-lg-none btn fs-5"><i
+                                class="bi bi-list"></i></button>
+
+                        <div class="dropdown ms-auto">
+
+                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1"
+                                style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate3d(0px, 52px, 0px);"
+                                data-popper-placement="bottom-start">
+                                <li><a class="dropdown-item" href="">Buy
+                                        on ZYB</a></li>
+                                <li><a class="dropdown-item" href="">Chart</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button id="connect" type="button" class="btn rounded-1 ms-3">
+                            Connect Wallet
+                        </button>
+                    </div>
+                </div>
+
+                <div class="container pt-3">
+                    <div class="px-sm-3 mt-5">
+                        <div class="card border border-primary text-center p-4">
+                            <div class="row row-cols-1 row-cols-sm-3">
+                                <div class="col mb-3">
+                                    <div class="text-secondary mb-1">
+                                        Market Cap <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip"
+                                            data-bs-html="true" data-bs-placement="bottom"
+                                            title="Based on our actual circulating supply. Other chart may display differently."></i>
+                                    </div>
+                                    <h4 id="mcap" class="fw-bold">Loading</h4>
+                                </div>
+
+                                <div class="col mb-3">
+                                    <div class="text-secondary mb-1">$CARROT Price</div>
+                                    <h4 id="price" class="fw-bold">Loading</h4>
+                                </div>
+
+                                <div class="col mb-3">
+                                    <div class="text-secondary mb-1">
+                                        Next Rebase <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip"
+                                            data-bs-html="true" data-bs-placement="bottom"
+                                            title="Rebase may get delayed due to blockchain traffic"></i>
+                                    </div>
+                                    <h4 id="nextRebase" class="fw-bold">Every Block</h4>
+                                </div>
+
+                                <div class="col mb-3">
+                                    <div class="text-secondary mb-1">
+                                        Circulating Supply <i class="bi bi-patch-question-fill" data-bs-toggle="tooltip"
+                                            data-bs-html="true" title="Excludes burned / locked tokens"></i>
+                                    </div>
+                                    <h4 id="cirSupply" class="fw-bold">Loading</h4>
+                                </div>
+
+                                <div class="col mb-3">
+                                    <div class="text-secondary mb-1">
+                                        Staked Rate
+                                    </div>
+                                    <h4 id="stakedRate" class="fw-bold">~%</h4>
+                                </div>
+
+                                <div class="col mb-3">
+                                    <div class="text-secondary mb-1">Burned Supply</div>
+                                    <h4 id="burned" class="fw-bold">Loading</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/rangeslider.js@2.3.3/dist/rangeslider.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.1/web3.min.js"></script>
+    <script src="./js/detect-provider.js"></script>
+    <script src="./js/ethers.umd.min.js"></script>
+    <script src="./js/base.js"></script>
+
+    <script>
+        document.getElementById("showSidebar").addEventListener("click", function () {
+            document.getElementById("sidebarContainer").classList.add("show");
+            document.getElementById("overlay").style.display = "block"
+        });
+
+        document.getElementById("overlay").addEventListener("click", function () {
+            document.getElementById("sidebarContainer").classList.remove("show");
+            document.getElementById("overlay").style.display = "none"
+        });
+
+        let balance;
+        let stakedAmount;
+        let amountTo = [];
+        let amountFrom = [];
+        var dataL;
+        var totalStaked = 0;
+        let totalSupply;
+        let blackHoleAmount;
+        let ethPrice;
+        let price;
+
+        function getData(mod, skip) {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.status == 200) {
+                    var json = httpRequest.responseText;
+                    dataL = json;
+                }
+            };
+            httpRequest.open('POST', 'https://api.thegraph.com/subgraphs/name/mrredeyedrabbit/redrabbithole', false);
+            httpRequest.setRequestHeader('content-type', 'application/json');
+            if (mod === 1){
+                var sendData = { 'query': '\n        {\n        transfers(skip: '+ skip +', first: 1000, where: {to: "0x93db787b4376586d9a4bd27f01a6b3cdd418c2fe", blockNumber_gt: "62970651"}) {\n            value\n}\n        }\n        ' }
+            }else {
+                var sendData = { 'query': '\n        {\n        transfers(skip: '+ skip +', first: 1000, where: {from: "0x93db787b4376586d9a4bd27f01a6b3cdd418c2fe", blockNumber_gt: "62970651"}) {\n            value\n}\n        }\n        ' }
+            }
+            httpRequest.send(JSON.stringify(sendData));
+            if (mod === 1) amountTo.push(JSON.parse(dataL).data.transfers);
+            else amountFrom.push(JSON.parse(dataL).data.transfers);
+        }
+
+        async function doAfterConnect() {
+            displayText('#connect', SHORTADR(CURADR));
+
+            for (var i = 0; i <= 10; ++i){
+                getData(1,i * 1000);
+                if (amountTo[i].length == 0) break;
+            }
+            for (var i = 0; i <= 10; ++i){
+                getData(2,i * 1000);
+                if (amountFrom[i].length == 0) break;
+            }
+            for (var i = 0; i < amountTo.length - 1; ++i) {
+                for (var j = 0;j < amountTo[i].length; ++j) {
+                    totalStaked += Number(amountTo[i][j].value);
+                }
+            }
+            for (var i = 0; i < amountFrom.length - 1; ++i) {
+                for (var j = 0;j < amountFrom[i].length; ++j) {
+                    totalStaked -= Number(amountFrom[i][j].value);
+                }
+            }
+            totalStaked += 1546423290381.9536 * 1e18; // staked let block number 62970651.
+            let circulatingSupply = totalSupply - stakedAmount / ETHDIV + totalStaked / ETHDIV;
+            displayText("#cirSupply", `${COMMA(ROUND(circulatingSupply, 3))}`);
+            displayText("#stakedRate", `$${COMMA(ROUND(totalStaked / ETHDIV / circulatingSupply * 100, 2))}%`);
+            blackHoleAmount = (blackHoleAmount / ETHDIV + (3333333333333) - circulatingSupply);
+            displayText("#burned", `${COMMA(ROUND(blackHoleAmount, 3))}`);
+
+            let mcap = price * circulatingSupply;
+            displayText("#mcap", `$${COMMA(ROUND(mcap))}`);
+        }
+        (async () => {
+            // do global
+            select('#connect').onclick = async () => {
+                await conn();
+            };
+
+            ethPrice = 1 / (await getPrice('weth'));
+
+            totalSupply = await CONTS['web3'].totalSupply();
+            totalSupply = totalSupply / ETHDIV;
+
+            stakedAmount = await CONTS['web3'].balanceOf("0x93db787b4376586d9a4bd27f01a6b3cdd418c2fe");
+            //lockedAmount = lockedAmount / ETHDIV;
+
+            blackHoleAmount = await CONTS['web3'].balanceOf("0x000000000000000000000000000000000000dEaD");
+            //displayText("#burned", `${COMMA(ROUND((blackHoleAmount / ETHDIV + (3333333333333) - totalSupply), 3))}`);
+
+            let circulatingSupply = totalSupply;
+            //displayText("#cirSupply", `${COMMA(ROUND(circulatingSupply, 3))}`);
+
+            let liqReserves = await CONTS['pairweth'].getReserves();
+            let liqETH = liqReserves[0] / ETHDIV;
+            let liqBalance = liqETH * ethPrice;
+            //displayText("#stakedRate", `$${COMMA(ROUND(stakedAmount / ETHDIV / circulatingSupply * 100, 2))}%`);
+
+            let liqEggs = liqReserves[1] / ETHDIV;
+            let liqRate = liqETH / liqEggs;
+            price = liqRate * ethPrice;
+            displayText("#price", `$${COMMA(ROUND(price, 8))}`);
+
+            let mcap = price * circulatingSupply;
+            //displayText("#mcap", `$${COMMA(ROUND(mcap))}`);
+
+
+            $('[data-bs-toggle="tooltip"]').tooltip();
+
+            await getCurAdr();
+            if (CURADR == null) {
+                // connect wallet button
+                return;
+            }
+            await doAfterConnect();
+
+            // let [res, data] = await GAS('web3', 'manualRebase', []);
+            // if (res == true) {
+            //   return;
+            // } else {
+            //   gasEstimation = data;
+            //   displayText("#lastRebase", `${lastRebaseBlock}, ${curBlock}, ${lastRebaseTime}, ${gasEstimation}`);
+            // }
+
+            $('[data-bs-toggle="tooltip"]').tooltip();
+        })();
+    </script>
+</body>
+
+</html>
